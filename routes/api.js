@@ -52,9 +52,9 @@ router.post("/saveTransaction", (req, res) => {
         req.body.userId,
         {
             $push: {
-                transactions:{
-                    dueDate:req.body.dueDate,
-                    dueAmount:req.body.dueAmount
+                transactions: {
+                    dueDate: req.body.dueDate,
+                    dueAmount: req.body.dueAmount
                 }
             },
         },
@@ -78,13 +78,25 @@ router.post("/saveTransaction", (req, res) => {
 // GET all transactions
 
 router.post("/getLatestTransactions", (req, res) => {
-    Borrower.find({'_id':req.body._id},function (err, result) {
+    Borrower.find({ '_id': req.body._id }, function (err, result) {
         if (err) {
             console.log(err);
         } else {
             res.send(result);
         }
     }).sort({ dueDate: -1 });
+
+});
+
+// Delete borrower
+router.post("/deleteBorrower", (req, res) => {
+    Borrower.findByIdAndDelete({ '_id': req.body._id }, function (err, result) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+    });
 
 });
 
