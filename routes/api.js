@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
+
 mongoose.set("strictQuery", false);
 const db =
     "mongodb+srv://finapp:finapp1617@finapp.fixnkru.mongodb.net/?retryWrites=true&w=majority&appName=finapp";
