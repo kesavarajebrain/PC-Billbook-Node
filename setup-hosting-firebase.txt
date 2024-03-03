@@ -1,0 +1,20 @@
+create a project on firebase 
+in our nodejs local folder - initilize the firebase functions 
+1. > firebase init functions
+2. Are you ready to proceed? Yes
+3. Please select an option: Use an existing project
+4. Select a default Firebase project for this directory: pcbillbook (pcbillbook) - select recently created one 
+5. What language would you like to use to write Cloud Functions? JavaScript
+6. Do you want to use ESLint to catch probable bugs and enforce style? No
+7. Do you want to install dependencies with npm now? Yes
+
+after that Functions folder will created in our nodejs project
+
+inside functions folder index .js is there - is the main file
+inside that we merge our local index.js or server .js files 
+and install configured package using npm 
+
+then out back from funtions folder 
+then give FIREBASE DEPLOY cmd
+make sure you have a billing ac 
+then check the url 
